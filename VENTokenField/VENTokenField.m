@@ -135,6 +135,12 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     self.inputTextField.textColor = _inputTextFieldTextColor;
 }
 
+- (void)setInputTextFieldFont:(UIFont *)inputTextFieldFont
+{
+    _inputTextFieldFont = inputTextFieldFont;
+    self.inputTextField.font = _inputTextFieldFont;
+}
+
 - (void)setToLabelTextColor:(UIColor *)toLabelTextColor
 {
     _toLabelTextColor = toLabelTextColor;
@@ -168,6 +174,10 @@ static const CGFloat VENTokenFieldDefaultMaxHeight          = 150.0;
     return self.inputTextField.text;
 }
 
+- (void)setInputText:(NSString *) text
+{
+    self.inputTextField.text = text;
+}
 
 #pragma mark - View Layout
 

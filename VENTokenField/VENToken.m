@@ -58,6 +58,14 @@
     [self.titleLabel sizeToFit];
 }
 
+- (void)setFont:(UIFont *)font
+{
+    self.titleLabel.font = font;
+    [self.titleLabel sizeToFit];
+    self.frame = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetMaxX(self.titleLabel.frame) + 3, CGRectGetHeight(self.frame));
+    [self.titleLabel sizeToFit];
+}
+
 - (void)setHighlighted:(BOOL)highlighted
 {
     _highlighted = highlighted;
