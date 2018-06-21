@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "VENBackspaceTextField.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -53,7 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)inputText;
 - (void)setInputText:(NSString *) text;
 
-
 /**-----------------------------------------------------------------------------
  * @name Customization
  * -----------------------------------------------------------------------------
@@ -78,6 +78,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UIFont *inputTextFieldFont;
 
 @property (strong, nonatomic) UILabel *toLabel;
+
+@property (strong, nonatomic) VENBackspaceTextField *inputTextField;
 
 @property (strong, nonatomic, nullable) NSArray *delimiters;
 @property (copy, nonatomic, nullable) NSString *placeholderText;
